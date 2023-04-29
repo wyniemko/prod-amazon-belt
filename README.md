@@ -1,10 +1,12 @@
 # Conveyor Belt Monitoring System Manual
 ## Automated Maintenance Inspection for Amazon Fulfillment Centers.
 
-Into: Production ready version of the rips + defects + tracking algorithm on the flask webserver
-Date Updated: 4/29/23
-Prepared for: Amazon RME [MQJ5]
-Created by: Team 5 ~ Purdue University [ENGT 481]
+![Demo](https://github.com/wyniemko/prod-amazon-belt/blob/main/images/IMG_2568.JPG?raw=true)
+
+- Into: Production ready version of the rips + defects + tracking algorithm on the flask webserver
+- Date Updated: 4/29/23
+- Prepared for: Amazon RME [MQJ5]
+- Created by: Team 5 ~ Purdue University [ENGT 481]
 
 # Introduction
 The Conveyor Belt Monitoring System is an application that monitors the condition of a conveyor belt used at Amazon Fulfillment Centers. The Conveyor Belt Monitoring System is a web application designed to automate the process of monitoring the condition of the conveyor belts. This system uses computer vision to analyze images captured by a camera mounted above the conveyor belt to extract key features such as the straightness of the belt, the number of rips on the belt, and the number of vertices on the belt surface. Based on these features, the system generates a report indicating the condition of the belt and whether maintenance is required.
