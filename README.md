@@ -5,61 +5,6 @@ Date Updated: 4/29/23
 Prepared for: Amazon RME [MQJ5]
 Created by: Team 5 ~ Purdue University [ENGT 481]
 
-# Introduction	3
-1.1. Purpose of the manual	3
-1.2. Scope of the web app	3
-1.3. Overview of the web app	3
-1.4 Automated Scheduling	3
-1.5. Terminology and definitions	4
-
-# System Requirements	4
-2.1. Hardware requirements	4
-2.2. Software requirements	4
-2.3. Supported browsers	5
-
-# Installation and Setup	5
-3.1. Installation instructions	5
-3.2. Configuration instructions	6
-3.3. Licensing information	7
-
-# Fixture and Hardware Mechanical Designs	7
-4.1. Full Assembly - Fixture & Nvidia Jetson Case	7
-4.2. Nvidia Jetson Case - Assembly	8
-4.3. Nvidia Jetson Case - Jetson	8
-4.4. Nvidia Jetson Case - Camera	9
-4.5. Nvidia Jetson case - Mount Lid	9
-
-# User Interface	10
-5.1. Overview of the UI	10
-5.2. Navigation and menus	10
-5.3. Dashboard and widgets	10
-5.4. Forms and input controls	10
-5.5. Reports and data visualization	10
-5.6. Index.html	10
-5.7. Results.html	11
-5.8. Data.html	12
-
-# Data Management	12
-6.1. Data sources and integration	12
-6.2. Data import and export	13
-6.3. Data validation and cleansing	13
-
-# Functionality	13
-7.1. Features and modules	13
-7.2. Use cases and scenarios	13
-7.3. Business logic and rules	14
-7.4. Scheduled processing	14
-
-# Maintenance and Troubleshooting	14
-8.1. System Maintenance Tasks	14
-8.2. Performance Tuning and Optimization	15
-8.3. Error Messages and Logs	15
-8.4. Known Issues and Limitations	15
-
-# Appendix	16
-9.1. Glossary	16
-9.2. References, Resources, FAQ	17
-
 # Introduction
 The Conveyor Belt Monitoring System is an application that monitors the condition of a conveyor belt used at Amazon Fulfillment Centers. The Conveyor Belt Monitoring System is a web application designed to automate the process of monitoring the condition of the conveyor belts. This system uses computer vision to analyze images captured by a camera mounted above the conveyor belt to extract key features such as the straightness of the belt, the number of rips on the belt, and the number of vertices on the belt surface. Based on these features, the system generates a report indicating the condition of the belt and whether maintenance is required.
 
@@ -109,7 +54,7 @@ Note: It is recommended to use the latest version of the above browsers for the 
 
 Before running the system, ensure that all the above hardware and software requirements are met. Failure to meet these requirements may result in the system not functioning as intended or not working.
 
-Installation and Setup
+# Installation and Setup
 3.1. Installation instructions
 /home/dh/Desktop/Belt-System-Final/
 ├── requirements.txt
@@ -160,7 +105,7 @@ python run.py
 
 Open a web browser and navigate to http://localhost:5000/ to access the home page of the web application.
 
-3.2. Configuration instructions
+# 3.2. Configuration instructions
 The Conveyor Belt Monitoring System does not require any configuration before use. However, if you want to change the port number used by the web application, you can do so by modifying the following line in the run.py file:
 
 app.run(host='0.0.0.0', port=5000, debug=True)
@@ -170,87 +115,86 @@ Simply change the value of the port parameter to the desired port number.
 3.3. Licensing information
 The Conveyor Belt Monitoring System is released under the Apache License 2.0, which is an open-source license approved by Amazon. You can find the full text of the license in the LICENSE file included in the repository. By using this software, you agree to abide by the terms of the Apache License 2.0.
 
-Fixture and Hardware Mechanical Designs
-These downloadable CAD files and PDF of these drawings can be found at this link, 
+# Fixture and Hardware Mechanical Designs
+These downloadable CAD files and PDF of these drawings can be found on this github file.
+- Full Assembly - Fixture & Nvidia Jetson Case
+- Nvidia Jetson Case - Assembly
+- Nvidia Jetson Case - Jetson
+- Nvidia Jetson Case - Camera
+- Nvidia Jetson case - Mount Lid
 
-4.1. Full Assembly - Fixture & Nvidia Jetson Case
-
-4.2. Nvidia Jetson Case - Assembly
-
-4.3. Nvidia Jetson Case - Jetson
-4.4. Nvidia Jetson Case - Camera
-4.5. Nvidia Jetson case - Mount Lid
-User Interface
-5.1. Overview of the UI
+# User Interface
+# 5.1. Overview of the UI
 The UI (user interface) for the automated maintenance inspection system for Amazon conveyor belts is designed to be intuitive and user-friendly. It includes forms for entering data and updating benchmark values, as well as buttons for navigating to different sections of the system. The UI also includes reports and data visualizations for displaying the results of inspections.
 
-5.2. Navigation and menus
+# 5.2. Navigation and menus
 The UI features a navigation bar with links to different sections of the system, such as the home page, the data page, and the results page. The forms for entering data and updating benchmark values are located on the home page. The results page displays the results of inspections in a table format.
 
-5.3. Dashboard and widgets
+# 5.3. Dashboard and widgets
 The UI does not include a traditional dashboard, but it does feature a table on the results page that displays the performance metrics for the conveyor belt. The table includes values for average straightness, total number of rips, and average overall surface condition, as well as benchmarks for each metric. The table also includes a column for performance, which indicates whether the conveyor belt is in good or bad condition based on the benchmarks.
 
-5.4. Forms and input controls
+# 5.4. Forms and input controls
 The UI includes two forms for entering data and updating benchmark values. The data entry form includes fields for entering the belt speed and length, while the benchmark update form includes fields for updating the benchmarks for average straightness, total number of rips, and average overall surface condition. Both forms include input controls in the form of number input fields.
 
-5.5. Reports and data visualization
+# 5.5. Reports and data visualization
 The UI includes a report in the form of a table on the results page that displays the performance metrics for the conveyor belt. The table is designed to be easy to read and includes a column for performance, which makes it easy to determine whether the conveyor belt is in good or bad condition. The UI does not include any data visualization beyond the table.
-5.6. Index.html
+
+# 5.6. Index.html
 The index.html page is the home page of the automated maintenance inspection system for Amazon conveyor belts. It provides an overview of the system and includes forms for entering data and updating benchmark values. The page is designed to be user-friendly, with a clear navigation bar and intuitive layout.
 
 The top of the page includes the system title and a brief description of its purpose. Below that, there are two forms: one for entering data and one for updating benchmark values. The data entry form includes fields for entering the belt speed and length, while the benchmark update form includes fields for updating the benchmarks for average straightness, total number of rips, and average overall surface condition. Both forms include input controls in the form of number input fields. Below the forms, there is a brief explanation of how the system works and what it does. The page also includes a section on the importance of regular maintenance for conveyor belts, with some statistics and facts to back up the claims.
 
-5.7. Results.html
+# 5.7. Results.html
 The results.html page displays the results of inspections for the Amazon conveyor belts. It features a table that shows the performance metrics for the conveyor belt, including the average straightness, total number of rips, and average overall surface condition. The table also includes benchmarks for each metric and a column for performance, which indicates whether the conveyor belt is in good or bad condition based on the benchmarks.
 
 At the top of the page, there is a navigation bar with links to different sections of the system. Below that, there is a summary of the results of the latest inspection, including the date of the inspection, the number of rips detected, and the overall condition of the conveyor belt. The table is located below the summary and is designed to be easy to read. It includes color-coded rows to indicate whether the performance metric is above or below the benchmark. The performance column uses green text for good condition and red text for bad condition, making it easy to see at a glance whether the conveyor belt needs maintenance.
 
-5.8. Data.html
+# 5.8. Data.html
 The data.html page displays the data entered into the automated maintenance inspection system for the Amazon conveyor belts. It features a table that shows the belt speed and length entered for each inspection, as well as the benchmarks for average straightness, total number of rips, and average overall surface condition.
 
 At the top of the page, there is a navigation bar with links to different sections of the system. Below that, there is a summary of the data entered into the system, including the number of inspections and the average belt speed and length. The table is located below the summary and is designed to be easy to read. It includes color-coded rows to indicate whether the benchmarks have been met or not. The table also includes buttons for editing or deleting data, making it easy to update the system as needed.
 
-Data Management
-6.1. Data sources and integration
+# Data Management
+# 6.1. Data sources and integration
 The Conveyor Belt Monitoring System is designed to work with a variety of data sources and integrates seamlessly with Amazon's existing fulfillment center infrastructure. The system captures images of the conveyor belt using a camera mounted above the belt and processes these images using OpenCV functions. The system then extracts key features of the belt, such as its straightness, the number of rips, and the number of vertices on its surface. The system also allows for manual data entry of the belt speed and length.
 
-6.2. Data import and export
+# 6.2. Data import and export
 The Conveyor Belt Monitoring System includes data import and export features that allow users to import and export data from the system. The system allows users to export inspection reports and historical data in the datapage, accessible via SQLlit3. The system also allows users to import data into the system, including belt speed and length, and benchmark values.
 
-6.3. Data validation and cleansing
+# 6.3. Data validation and cleansing
 The Conveyor Belt Monitoring System includes data validation and cleansing features that ensure the accuracy and completeness of the data entered into the system. The system validates the data entered into the data entry form to ensure that it is within acceptable ranges and formats. The system also includes a data cleansing feature that identifies and removes any duplicate or inconsistent data.
 
-Functionality
+# Functionality
 The Conveyor Belt Monitoring System provides various features and modules to automate the process of monitoring the condition of conveyor belts used in manufacturing or logistics facilities. These features and modules are designed to improve efficiency, reduce downtime, and prevent accidents.
 
-7.1. Features and modules
+# 7.1. Features and modules
 The following features and modules are included in the Conveyor Belt Monitoring System:
 Image acquisition: The system captures images of the conveyor belt using a camera mounted above the belt.
 Image processing: The system processes the captured images using OpenCV functions to extract key features of the belt, such as its straightness, the number of rips, and the number of vertices on its surface.
 Inspection report: Based on the extracted features, the system generates an inspection report that indicates whether maintenance is required for the belt.
 Historical data: The system stores inspection reports in a SQLite database, allowing users to view the historical data of previous inspections.
 
-7.2. Use cases and scenarios
+# 7.2. Use cases and scenarios
 The Conveyor Belt Monitoring System can be used in various scenarios, such as:
 
 Preventative maintenance: By monitoring the condition of the conveyor belts, the system can help identify issues before they cause downtime or accidents.
 Quality control: The system can help ensure that the conveyor belts are functioning properly and producing high-quality products.
 Compliance: The system can help ensure compliance with safety regulations and standards.
 
-7.3. Business logic and rules
+# 7.3. Business logic and rules
 The Conveyor Belt Monitoring System follows certain business logic and rules to ensure accurate and reliable results. These rules include:
 
 Threshold values: The system uses threshold values for key features, such as straightness and number of rips, to determine whether maintenance is required for the belt.
 Benchmarks: The system compares the performance metrics of the conveyor belt, such as average straightness and total number of rips, to benchmarks to determine whether the conveyor belt is in good or bad condition.
 User roles and permissions: The system uses different user roles and permissions to ensure that only authorized users can perform certain actions, such as updating benchmark values.
 
-7.4. Scheduled processing:
+# 7.4. Scheduled processing:
 The Conveyor Belt Monitoring System includes a scheduled processing functionality to trigger the /process, /results, and /data routes at 10am. This is accomplished using the APScheduler library. The default speed and length values for processing can be set, and the process function generates an inspection report based on these values.
 
 Note: The Conveyor Belt Monitoring System does not have any APIs or integrations at this time.
 
-Maintenance and Troubleshooting
-8.1. System Maintenance Tasks
+# Maintenance and Troubleshooting
+# 8.1. System Maintenance Tasks
 The Conveyor Belt Monitoring System requires regular maintenance to ensure it runs smoothly and efficiently. Here are some tasks that should be performed regularly to keep the system in good working order:
 
 Check the camera and lighting system: Make sure the camera is clean and properly positioned to capture clear images of the conveyor belt. Check that the lighting system provides sufficient light for clear image capture.
@@ -259,7 +203,7 @@ Check the software components: Ensure that all software components are up-to-dat
 Backup the database: Regularly backup the SQLite database that stores the inspection results and historical data to prevent data loss.
 Schedule maintenance: Schedule regular maintenance to clean and replace worn or damaged components such as the conveyor belt or camera.
 
-8.2. Performance Tuning and Optimization
+# 8.2. Performance Tuning and Optimization
 To optimize the performance of the Conveyor Belt Monitoring System, consider the following:
 
 Increase processing speed: Upgrade the hardware components such as the Nvidia Jetson Nano or USB camera to increase processing speed.
@@ -267,10 +211,10 @@ Optimize software configuration: Tune the configuration of the software componen
 Limit background processes: Limit the number of background processes running on the system to reduce CPU usage.
 Optimize the camera position: Adjust the camera position and lighting system to optimize image capture and processing.
 
-8.3. Error Messages and Logs
+# 8.3. Error Messages and Logs
 The Conveyor Belt Monitoring System logs error messages to help identify and diagnose problems. If an error occurs, it is important to check the logs to determine the cause of the error. The logs are stored in the log file located in the system's root directory. If necessary, additional logs can be added to the system to help identify and diagnose problems.
 
-8.4. Known Issues and Limitations
+# 8.4. Known Issues and Limitations
 The Conveyor Belt Monitoring System has the following known issues and limitations:
 
 Limited camera coverage: The system only monitors a limited area of the conveyor belt, and may not detect issues outside of this area.
@@ -280,8 +224,8 @@ Limited customization: The system is designed to work with the specific hardware
 
 Note: It is important to keep these limitations in mind when using the Conveyor Belt Monitoring System, and to perform additional maintenance and troubleshooting as necessary to ensure the system is functioning correctly.
 
-Appendix
-9.1. Glossary
+# Appendix
+# 9.1. Glossary
 Here are some technical terms and acronyms used throughout this manual:
 
 Computer Vision: A field of study that focuses on enabling machines to interpret and understand visual data from the world around them.
@@ -291,14 +235,14 @@ SQLite: A lightweight relational database management system that is included wit
 Feature: A specific characteristic or property of the conveyor belt that is extracted by the system, such as the straightness of the belt or the number of rips on the belt.
 Maintenance: The process of repairing or replacing worn or damaged parts of the conveyor belt to ensure its proper functioning.
 
-9.2. References and Resources
+# 9.2. References and Resources
 Here are some useful resources for further reading on the topics covered in this manual:
 The OpenCV documentation: https://docs.opencv.org/ 
 The Flask documentation: https://flask.palletsprojects.com/en/2.1.x/ 
 The SQLite documentation: https://www.sqlite.org/docs.html 
 The Nvidia Jetson Nano Developer Kit page: https://developer.nvidia.com/embedded/jetson-nano-developer-kit 
 
-9.3. FAQ
+# 9.3. FAQ
 Q: Can I use a different camera than the 1080p 60fps USB camera specified in the manual?
 A: While the system has been optimized to work with the 1080p 60fps USB camera, other cameras may work as well. However, we cannot guarantee the same level of performance or accuracy with other cameras.
 
@@ -309,4 +253,4 @@ Q: Can I modify the source code of the Conveyor Belt Monitoring System?
 A: Yes, the source code is open-source and available on the GitHub repository provided in this manual. However, any modifications made to the system are at your own risk and may affect its performance or accuracy.
 
 Q: Who do I contact for technical support or troubleshooting?
-A: If you encounter any technical issues or have questions about the system, please contact the Amazon Analytics team with the code, the device, and this user manual. If anything becomes unreachable and no solution is clear, contact Brady Wyniemko (bwyniemko@gmail.com) or 248-877-4099. 
+A: If you encounter any technical issues or have questions about the system, please contact the Amazon Analytics team with the code, the device, and this user manual. If anything becomes unreachable and no solution is clear, contact Brady Wyniemko (bwyniemko@gmail.com).
