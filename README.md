@@ -1,6 +1,7 @@
 # Conveyor Belt Monitoring System Manual
-## Automated Maintenance Inspection for Amazon Fulfillment Centers. Production ready version of the rips + defects + tracking algorithm on the flask webserver
+## Automated Maintenance Inspection for Amazon Fulfillment Centers.
 
+Into: Production ready version of the rips + defects + tracking algorithm on the flask webserver
 Date Updated: 4/29/23
 Prepared for: Amazon RME [MQJ5]
 Created by: Team 5 ~ Purdue University [ENGT 481]
